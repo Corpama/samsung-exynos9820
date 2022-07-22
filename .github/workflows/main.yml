@@ -55,9 +55,9 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="VN-CruelKernel-v5.4"     \
+                       name="VN-CruelKernel-v5.5"     \
                        toolchain=$TOOLCHAIN     \
-                       +magisk=v25.1                 \
+                       +magisk=v25.2                 \
                        +nohardening              \
                        +fp_boost              \
                        +ttl                      \
