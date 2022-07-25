@@ -55,7 +55,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="G977N-CruelKernelModified-v3.1"     \
+                       name="G977N-v3.1-magisk25.2"     \
                        toolchain=$TOOLCHAIN     \
                        +magisk                 \
                        +nohardening              \
