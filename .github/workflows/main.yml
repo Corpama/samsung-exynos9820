@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: default
+  TOOLCHAIN: system-clang
   INSTALLER: yes
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="VN-CruelKernel-v5.2"     \
+                       name="G977N-CruelKernelModified-v4.1"     \
                        toolchain=$TOOLCHAIN     \
                        +magisk=v24.3                 \
                        +nohardening              \
