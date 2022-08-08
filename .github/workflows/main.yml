@@ -26,11 +26,11 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="G977N-CruelKernelModified-v4.1"     \
-                       toolchain=$TOOLCHAIN     \
-                       +magisk=v24.3                 \
+                       name="G977N-v4.1SC-magisk25.2"\
+                       toolchain=$TOOLCHAIN      \
+                       +magisk                   \
                        +nohardening              \
-                       +fp_boost              \
+                       +fp_boost                 \
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
@@ -39,14 +39,16 @@ jobs:
                        +force_dex_wqhd           \
                        +morosound                \
                        +boeffla_wl_blocker       \
-                       +nodebug                   \
-                       +noaudit                   \
-                       +noksm                   \
-                       +nomodules                   \
-                       +usb_serial                   \
-                       +sched_powersave                   \
-                       +sched_performance                   \
-                       +fake_config                   \
+                       +nodebug                  \
+                       +noaudit                  \
+                       +noksm                    \
+                       +nomodules                \
+                       +usb_serial               \
+                       +sched_powersave          \
+                       +sched_performance        \
+                       +sched_ondemand           \
+                       +performance              \
+                       +fake_config              \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
