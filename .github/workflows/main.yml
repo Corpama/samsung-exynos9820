@@ -57,7 +57,7 @@ jobs:
                        model=${{ matrix.model }} \
                        name="G977N-v3.1D-magisk25.2"\
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       +magisk="canary"          \
                        +nohardening              \
                        +fp_boost                 \
                        +ttl                      \
